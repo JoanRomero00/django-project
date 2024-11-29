@@ -13,9 +13,6 @@ sudo apt install python3-pip
 ```
 ```bash
 pip install django
-## Crear entorno virtual
-```bash
-python -m venv venv
 ```
 ## Instalar Bootstrap
 ```bash
