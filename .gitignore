@@ -5,7 +5,6 @@
 venv
 fontawesome
 __pycache__
-static
 # Ignora todos los archivos de texto
 #*.txt
 
