@@ -1,0 +1,94 @@
+{% load bootstrap5 %}
+{% load static %}
+
+<!DOCTYPE html>
+<htm lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Projects</title>
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <link href="{% static 'fontawesome/css/all.min.css' %}" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand nav-link col-md-3 col-lg-2 me-0 px-3" href="#">
+                    <i class="fa fa-home fa-lg me-2" aria-hidden="true"></i>
+                    <font class="text-center fw-bolder m-1">Company Name</font>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <form class="input-group">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-primary" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        </form>
+                    </ul>
+                    <div>
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <a class="nav-link" href="#"><i class="fas fa-user fa-lg me-1"></i><font class="text-center fw-bolder m-1">User Name</font></a>
+                            <a class="nav-link" href="#"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i></a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container-fluid row">
+        <div class="p-3 text-white bg-dark col-md-3 col-lg-2 d-md-block sidebar collapse">
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active" aria-current="page">
+                        <i class="fa fa-home fa-lg me-1" aria-hidden="true"></i>
+                        <font class="text-start m-1">Home</font>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link text-white">
+                        <i class="fa fa-tachometer me-2" aria-hidden="true"></i>
+                        <font class="text-start m-1">Dashboard</font>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link text-white">
+                        <i class="fa fa-table me-2" aria-hidden="true"></i>
+                        <font class="text-start m-1">Orders</font>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link text-white">
+                        <i class="fa fa-tasks me-2" aria-hidden="true"></i>
+                        <font class="text-start m-1">Products</font>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link text-white">
+                        <i class="fa fa-cubes me-2" aria-hidden="true"></i>
+                        <font class="text-start m-1">Customers</font>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            {% block content %}
+            {% endblock %}
+        </div>
+        
+    </main>
+
+    <footer class="footer mt-auto py-3 bg-light fixed-bottom">
+        <div class="container text-center">
+            <span class="text-muted">Copyright 2024 © Sanbamero - Argentina. Todos los derechos reservados.</span>
+        </div>
+    </footer>
+
+</body>
+</html>
